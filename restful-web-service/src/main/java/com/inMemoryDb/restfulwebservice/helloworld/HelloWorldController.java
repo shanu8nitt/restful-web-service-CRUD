@@ -30,7 +30,7 @@ public class HelloWorldController {
 	
 	@GetMapping("/hello-translation")
 	public String name(@RequestHeader(name = "Accept-Language", required = false) Locale local) {
-		return messageSource9.getMessage("HELLO_LABEL", null, local);
+		return messageSource9.getMessage("HELLO_LABEL", null, local); //can use LocaleContextHolder.getLocale() here and skip @requestHeader 
 		
 	}
 	
